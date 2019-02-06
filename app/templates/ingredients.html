@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+		table, th, td {
+		    border: 1px solid black;
+		    border-collapse: collapse;
+		}
+		</style>
+	</head>
+	<body>
+		<table style="border: 1px solid black;border-collapse:collapse;">
+		<tr>
+			<th>Ingredients</th>
+		</th>
+		{% for w in words %}
+		    <tr>
+		      <td>{{ w|tojson|safe }}</td>
+		    </tr>
+		{% endfor %}
+		</table>
+	</body>
+</html>
